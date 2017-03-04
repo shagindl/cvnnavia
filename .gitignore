@@ -3,4 +3,5 @@
 # Ignor ModelSim files
 *.mti
 *.mpf
+*.wlf
 */work/*
