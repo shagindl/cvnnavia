@@ -26,4 +26,12 @@
 Реализация фильтра по данной задачи находится в  
 [\\cvnnavia-interview\\task_2\\src\\](https://github.com/shagindl/cvnnavia-interview/tree/master/task_2/src) файл *task_2.sv*.  
 Testbench расположен в [\\cvnnavia-interview\\task_2\\tb\\](https://github.com/shagindl/cvnnavia-interview/tree/master/task_2/tb) файл *tb_task_2.sv*.  
+Диаграмма сигналов для данной задачи в ModelSim    
 ![Рисунок](https://github.com/shagindl/cvnnavia-interview/blob/master/task_2/vsim_image.jpg)
+
+**Задача №3**
+Реализована в 
+[\\cvnnavia-interview\\task_3\\](https://github.com/shagindl/cvnnavia-interview/tree/master/task_3) файл *task_3.sv*.  
+Testbench расположен в [\\cvnnavia-interview\\task_3](https://github.com/shagindl/cvnnavia-interview/tree/master/task_3) файл *tb_task_3.sv*.  
+Диаграмма сигналов для данной задачи в ModelSim  
+![Рисунок](https://github.com/shagindl/cvnnavia-interview/blob/master/task_3/task_3_image.jpg)
