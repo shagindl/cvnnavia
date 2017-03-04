@@ -14,21 +14,28 @@ intf_fltr ifltr();
 initial begin
 	$display("Start: init");
 	
-	ifltr.reset = 1'b1;
-	ifltr.clk = 1'b0;
-    ifltr.in = 1'b0;
-	#40 ifltr.reset = 1'b0;
+	reset = 1'b1;
+	clk = 1'b0;
+ 	#40 reset = 1'b0;
 	$display("end init");
 end
 
 // -- CLOCKs BLOK
 always begin
-  #10 ifltr.clk = ~ifltr.clk;
+  #10 clk = ~clk;
 end
 
+assign ifltr.clk = clk;
 assign ifltr.in = test_seq[$size(test_seq) - 1];
+
 always_ff @(posedge clk) begin
 	test_seq = (test_seq << 1) | test_seq[$size(test_seq) - 1];
+	check_seq = (check_seq << 1) | check_seq[$size(check_seq) - 1];
+	
+	// -- Check TEST
+	if(ifltr.out != check_seq[$size(check_seq) - 1]) begin
+	    $display("ERROR!!!");
+	end
 end
 
 fltr_task_2 fltr_task_2_inst(ifltr);
