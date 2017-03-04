@@ -24,6 +24,7 @@
     typedef logic signed[63 : 0] s64_t;
     typedef logic[31 : 0] float_t;
     
+    typedef enum {MD_IDLE, MD_SKIP} enTASK2_MODE;
     interface intf_fltr(
         wire clk, in, out
     );
